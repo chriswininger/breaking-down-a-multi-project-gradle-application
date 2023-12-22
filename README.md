@@ -79,6 +79,8 @@ dependencies {
   project dependencies in [the pluralsight tutorial](https://app.pluralsight.com/library/courses/gradle-build-tool-fundamentals),
   where they defined this at the top level
 
+![img_2.png](img_2.png)
+
 ### App directory
 
 * This specifies the application project, it pulls in a plugin defined in [buildSrc](./my-multi-module-test-v2/buildSrc),
