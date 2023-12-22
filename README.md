@@ -104,6 +104,18 @@ application {
 }
 ```
 
+### What is buildSrc?
+
+*Complex build logic is usually a good candidate for being encapsulated either as custom task or
+binary plugin. Custom task and plugin implementations should not live in the build script. It is very convenient to
+use buildSrc for that purpose as long as the code does not need to be shared among multiple, independent projects.
+The directory buildSrc is treated as an included build. Upon discovery of the directory, Gradle automatically
+compiles and tests this code and puts it in the classpath of your build script. For multi-project builds there can
+be only one buildSrc directory, which has to sit in the root project directory. buildSrc should be preferred over script
+plugins as it is easier to maintain, refactor and test the code.*
+
+-- https://github.com/chriswininger/breaking-down-a-multi-project-gradle-application
+
 ### org.chriswininger.multimoduletest.v2.kotlin-library-conventions
 
 * This seems to come from the buildSrc directory which has it's own `build.gradle.kts`, `settings.gradle.kts`,
