@@ -5,13 +5,11 @@ plugins {
 }
 
 repositories {
-  // Use the plugin portal to apply community plugins in convention plugins.
-  gradlePluginPortal()
   mavenCentral()
 }
 
 dependencies {
-  implementation("org.apache.commons:commons-text:1.10.0")
+  // wrapping this in api means that if something depends on utilities it will also pull in list
   api(project(":list"))
 }
 
